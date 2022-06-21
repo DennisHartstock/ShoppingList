@@ -8,7 +8,7 @@ import com.example.shoppinglist.domain.ShopListRepository
 object ShopListRepositoryImpl: ShopListRepository {
 
     private val shopListLiveData = MutableLiveData<List<ShopItem>>()
-    private val shopList = mutableListOf<ShopItem>()
+    private val shopList = sortedSetOf<ShopItem>({ p0, p1 -> p0.id.compareTo(p1.id) })
     private var autoIncrementId = 0
 
     init {
@@ -37,10 +37,10 @@ object ShopListRepositoryImpl: ShopListRepository {
         shopList.add(shopItem)
     }
 
-    override fun getShopItem(shopIdemId: Int): ShopItem {
+    override fun getShopItem(shopItemId: Int): ShopItem {
         return shopList.find {
-            it.id == shopIdemId
-        } ?: throw RuntimeException("Element with id $shopIdemId not found")
+            it.id == shopItemId
+        } ?: throw RuntimeException("Element with id $shopItemId not found")
     }
 
     override fun getShopList(): LiveData<List<ShopItem>> {
