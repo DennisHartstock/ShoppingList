@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.shoppinglist.R
 import com.example.shoppinglist.domain.ShopItem
@@ -13,8 +14,10 @@ class ShopListAdapter : RecyclerView.Adapter<ShopListAdapter.ShopItemViewHolder>
 
     var shopList = listOf<ShopItem>()
         set(value) {
+            val callback = ShopListDiffCallback(shopList, value)
+            val diffResult = DiffUtil.calculateDiff(callback)
+            diffResult.dispatchUpdatesTo(this)
             field = value
-            notifyDataSetChanged()
         }
 
     var onShopItemLongClickListener: ((ShopItem) -> Unit)? = null
@@ -24,7 +27,7 @@ class ShopListAdapter : RecyclerView.Adapter<ShopListAdapter.ShopItemViewHolder>
         val layout = when (viewType) {
             VIEW_TYPE_ENABLED -> R.layout.item_shop_enabled
             VIEW_TYPE_DISABLED -> R.layout.item_shop_disabled
-            else -> throw RuntimeException("Unknown view type: ${viewType}")
+            else -> throw RuntimeException("Unknown view type: $viewType")
         }
 
         val view = LayoutInflater.from(parent.context).inflate(layout, parent, false)
