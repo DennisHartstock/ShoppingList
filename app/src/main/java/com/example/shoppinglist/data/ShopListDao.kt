@@ -11,7 +11,7 @@ interface ShopListDao {
     fun getShopList(): LiveData<ShopItemDbModel>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun addSopItem(shopItemDbModel: ShopItemDbModel)
+    fun addShopItem(shopItemDbModel: ShopItemDbModel)
 
     @Query("DELETE FROM shop_items WHERE id=:shopItemId")
     fun deleteShopItem(shopItemId: Int)
