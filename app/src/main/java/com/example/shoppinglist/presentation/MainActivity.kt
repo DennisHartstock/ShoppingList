@@ -2,7 +2,6 @@ package com.example.shoppinglist.presentation
 
 import android.os.Bundle
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -83,23 +82,7 @@ class MainActivity : AppCompatActivity(), ShopItemFragment.OnEditingFinishedList
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val item = shopListAdapter.currentList[viewHolder.adapterPosition]
-                val alertDialog = AlertDialog.Builder(this@MainActivity)
-                alertDialog.setMessage("Eintrag ${item.name} löschen?")
-                    .setPositiveButton("Ja") { _, _ ->
-                        viewModel.deleteShopItem(item)
-                        Toast.makeText(
-                            this@MainActivity,
-                            "Eintrag gelöscht",
-                            Toast.LENGTH_LONG
-                        )
-                            .show()
-                    }
-//                        set post invisible :-((
-                    .setNegativeButton("Nein") { dialog, _ ->
-                        dialog.cancel()
-                    }
-                    .create()
-                    .show()
+                viewModel.deleteShopItem(item)
             }
         }
         val itemTouchHelper = ItemTouchHelper(callback)
