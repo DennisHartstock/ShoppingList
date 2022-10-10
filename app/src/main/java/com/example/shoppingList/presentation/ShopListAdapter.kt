@@ -1,14 +1,14 @@
-package com.example.shoppinglist.presentation
+package com.example.shoppingList.presentation
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.ListAdapter
-import com.example.shoppinglist.R
-import com.example.shoppinglist.databinding.ItemShopDisabledBinding
-import com.example.shoppinglist.databinding.ItemShopEnabledBinding
-import com.example.shoppinglist.domain.ShopItem
+import com.example.shoppingList.R
+import com.example.shoppingList.databinding.ItemShopDisabledBinding
+import com.example.shoppingList.databinding.ItemShopEnabledBinding
+import com.example.shoppingList.domain.ShopItem
 
 class ShopListAdapter : ListAdapter<ShopItem, ShopItemViewHolder>(ShopItemDiffCallback()) {
 
@@ -46,7 +46,7 @@ class ShopListAdapter : ListAdapter<ShopItem, ShopItemViewHolder>(ShopItemDiffCa
                 binding.shopItem = shopItem
             }
             is ItemShopEnabledBinding -> {
-                binding.shopitem = shopItem
+                binding.shopItem = shopItem
             }
         }
 

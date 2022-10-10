@@ -1,4 +1,4 @@
-package com.example.shoppinglist.presentation
+package com.example.shoppingList.presentation
 
 import android.net.Uri
 import android.os.Bundle
@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.example.shoppinglist.R
-import com.example.shoppinglist.databinding.ActivityMainBinding
+import com.example.shoppingList.R
+import com.example.shoppingList.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), ShopItemFragment.OnEditingFinishedListener {
 
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity(), ShopItemFragment.OnEditingFinishedList
             }
         }
         contentResolver.query(
-            Uri.parse("content://com.example.shoppinglist/shop_items"),
+            Uri.parse("content://com.example.shoppingList/shop_items/5"),
             null,
             null,
             null,

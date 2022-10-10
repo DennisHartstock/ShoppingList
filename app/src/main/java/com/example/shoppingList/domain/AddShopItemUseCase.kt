@@ -1,4 +1,4 @@
-package com.example.shoppinglist.domain
+package com.example.shoppingList.domain
 
 class AddShopItemUseCase(private val shopListRepository: ShopListRepository) {
 

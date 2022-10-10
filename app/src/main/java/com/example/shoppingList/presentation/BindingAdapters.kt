@@ -1,7 +1,7 @@
-package com.example.shoppinglist.presentation
+package com.example.shoppingList.presentation
 
 import androidx.databinding.BindingAdapter
-import com.example.shoppinglist.R
+import com.example.shoppingList.R
 import com.google.android.material.textfield.TextInputLayout
 
 @BindingAdapter("errorInputName")
