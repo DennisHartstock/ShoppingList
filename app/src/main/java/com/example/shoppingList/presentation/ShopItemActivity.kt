@@ -1,11 +1,11 @@
-package com.example.shoppinglist.presentation
+package com.example.shoppingList.presentation
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.shoppinglist.R
-import com.example.shoppinglist.domain.ShopItem
+import com.example.shoppingList.R
+import com.example.shoppingList.domain.ShopItem
 
 class ShopItemActivity : AppCompatActivity(), ShopItemFragment.OnEditingFinishedListener {
     private var screenMode = MODE_UNKNOWN

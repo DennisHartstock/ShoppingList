@@ -5,7 +5,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.shoppinglist.presentation.ShopItemViewModel" />
+            type="com.example.shoppingList.presentation.ShopItemViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"

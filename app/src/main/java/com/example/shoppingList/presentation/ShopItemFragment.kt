@@ -1,4 +1,4 @@
-package com.example.shoppinglist.presentation
+package com.example.shoppingList.presentation
 
 import android.content.Context
 import android.os.Bundle
@@ -9,8 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.shoppinglist.databinding.FragmentShopItemBinding
-import com.example.shoppinglist.domain.ShopItem
+import com.example.shoppingList.databinding.FragmentShopItemBinding
+import com.example.shoppingList.domain.ShopItem
 
 class ShopItemFragment : Fragment() {
 

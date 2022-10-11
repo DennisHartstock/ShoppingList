@@ -4,8 +4,8 @@
     <data>
 
         <variable
-            name="shopitem"
-            type="com.example.shoppinglist.domain.ShopItem" />
+            name="shopItem"
+            type="com.example.shoppingList.domain.ShopItem" />
     </data>
 
     <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -32,7 +32,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@{shopitem.name}"
+                android:text="@{shopItem.name}"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -41,7 +41,7 @@
                 android:id="@+id/tv_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{String.valueOf(shopitem.count)}"
+                android:text="@{String.valueOf(shopItem.count)}"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />

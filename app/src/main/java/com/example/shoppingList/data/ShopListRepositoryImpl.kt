@@ -1,10 +1,10 @@
-package com.example.shoppinglist.data
+package com.example.shoppingList.data
 
 import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
-import com.example.shoppinglist.domain.ShopItem
-import com.example.shoppinglist.domain.ShopListRepository
+import com.example.shoppingList.domain.ShopItem
+import com.example.shoppingList.domain.ShopListRepository
 
 class ShopListRepositoryImpl(
     application: Application
